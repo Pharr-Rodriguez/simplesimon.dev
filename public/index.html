@@ -3,8 +3,55 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Simple Simon Project</title>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	</head>
+	<style media="screen">
+		.button {
+			border: 1px solid black;
+			height: 50px;
+			width: 50px;
+		}
+
+		#red {
+			background-color: red;
+		}
+		#blue {
+			background-color: blue;
+		}
+		#green {
+			background-color: green;
+		}
+
+		#yellow {
+			background-color: yellow;
+		}
+
+	</style>
 	<body>
 		<!-- TODO: Everything -->
+		<div class="container">
+			<div id="start" class="button" data-button="start">
+
+			</div>
+			<div class="row">
+				<div id="red" class="button" data-button="1">
+
+				</div>
+				<div id="blue" class="button" data-button="2">
+
+				</div>
+			</div>
+			<div class="row">
+				<div id="green" class="button" data-button="3">
+
+				</div>
+				<div id="yellow" class="button" data-button="4">
+
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/main.js">
+		</script>
+
 	</body>
 </html>
