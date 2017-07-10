@@ -1,8 +1,25 @@
 "use strict;"
+//variables:
+var game = {
+	playing: false
+}
+var simon = '';
+var player = '';
+
 //Event Listeners
-$(".button").click(function(buttons){
-	console.log($(this).data("button"));
+$(".button").click(function(){
+	var button = $(this).data("button");
+
+	if (button == "start" && !game.playing) {
+		game.playing = true;
+		// simonGenerator();
+	} else if (!isNaN(button) && game.playing){
+		player += button;
+	}
 })
+
+//Simon sequence generator
+
 
 //Main Game loop:
 
