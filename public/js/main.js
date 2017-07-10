@@ -1,5 +1,8 @@
+"use strict;"
 //Event Listeners
-
+$(".button").click(function(buttons){
+	console.log($(this).data("button"));
+})
 
 //Main Game loop:
 
