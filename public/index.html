@@ -4,48 +4,83 @@
 		<meta charset="utf-8">
 		<title>Simple Simon Project</title>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
 	<style media="screen">
+		.container {
+			width: 80%;
+		}
 		.button {
-			border: 1px solid black;
-			height: 50px;
-			width: 50px;
+			border-color: black;
+			/*height: 150px;
+			width: 150px;*/
+
 		}
 
+		#start {
+			background-color: black;
+			border: 15px solid;
+    		padding: 10px;
+    		border-top-right-radius: 5em;
+    		border-top-left-radius: 5em;
+    		border-bottom-left-radius: 5em;
+    		border-bottom-right-radius: 5em;
+    		height: 50px;
+			width: 50px;
+		}
+		.button-color {
+			height: 175px;
+			width: 175px;
+		}
 		#red {
 			background-color: red;
+			border-style: solid; 
+			border-width: 30px 30px 15px 15px;
+    		border-top-right-radius: 10em;
+
 		}
 		#blue {
 			background-color: blue;
+			border-style: solid; 
+			border-width: 15px 30px 30px 15px;
+    		border-bottom-right-radius: 10em;
+    		
+    		
 		}
 		#green {
 			background-color: green;
+			border-style: solid; 
+			border-width: 30px 15px 15px 30px;
+    		border-top-left-radius: 10em;
 		}
 
 		#yellow {
 			background-color: yellow;
+			border-style: solid; 
+			border-width: 15px 15px 30px 30px;
+    		border-bottom-left-radius: 10em;
 		}
 
 	</style>
 	<body>
 		<!-- TODO: Everything -->
 		<div class="container">
-			<div id="start" class="button" data-button="start">
+			<!-- <div id="start" class="button" data-button="start">
 
+			</div> -->
+			<div class="row">
+				<div id="green" class="button button-color" data-button="1">
+
+				</div>
+				<div id="red" class="button button-color" data-button="2">
+
+				</div>
 			</div>
 			<div class="row">
-				<div id="red" class="button" data-button="1">
+				<div id="yellow" class="button button-color" data-button="3">
 
 				</div>
-				<div id="blue" class="button" data-button="2">
-
-				</div>
-			</div>
-			<div class="row">
-				<div id="green" class="button" data-button="3">
-
-				</div>
-				<div id="yellow" class="button" data-button="4">
+				<div id="blue" class="button button-color" data-button="4">
 
 				</div>
 			</div>
