@@ -1,0 +1,91 @@
+
+.container {
+			position: fixed;
+    		left: 50%;
+    		top: 50%;	
+    		width:300px;
+    		height:300px;
+    		margin-left: -173px; /*half width*/
+    		margin-top: -32px; /*half height*/
+		}
+		.button {
+			border-color: black;
+			height: 100%;
+			width: 100%;
+
+		}
+
+		#start {
+			background-color: black;
+			border: 15px solid;
+    		padding: 10px;
+    		border-top-right-radius: 5em;
+    		border-top-left-radius: 5em;
+    		border-bottom-left-radius: 5em;
+    		border-bottom-right-radius: 5em;
+    		height: 25%;
+			width: 25%;
+			margin-left: -35px; /*half width*/
+    		margin-top: 80px; /*half height*/
+
+		}
+		.button-color {
+			height: 175px;
+			width: 175px;
+		}
+		#red {
+			background-color: red;
+			border-style: solid; 
+			border-width: 30px 30px 15px 15px;
+    		border-top-right-radius: 10em;
+    		position: absolute;
+    		left: 50%;
+    		top: 50%;	
+    		width:50%;
+    		height: 50%;
+    		margin-left: -35px; /*half width*/
+    		margin-top: -30px; /*half height*/
+
+		}
+		#blue {
+			background-color: blue;
+			border-style: solid; 
+			border-width: 15px 30px 30px 15px;
+    		border-bottom-right-radius: 10em;
+    		position: absolute;
+    		left: 50%;
+    		top: 50%;	
+    		width:50%;
+    		height: 50%;
+    		margin-left: -35px; /*half width*/
+    		margin-top: 165px; /*half height*/
+    		
+    		
+		}
+		#green {
+			background-color: green;
+			border-style: solid; 
+			border-width: 30px 15px 15px 30px;
+    		border-top-left-radius: 10em;
+    		position: absolute;
+    		left: 50%;
+    		top: 50%;	
+    		width:50%;
+    		height: 50%;
+    		margin-left: -230px; /*half width*/
+    		margin-top: -30px; /*half height*/
+		}
+
+		#yellow {
+			background-color: yellow;
+			border-style: solid; 
+			border-width: 15px 15px 30px 30px;
+    		border-bottom-left-radius: 10em;
+    		position: absolute;
+    		left: 50%;
+    		top: 50%;	
+    		width:50%;
+    		height: 50%;
+    		margin-left: -230px; /*half width*/
+    		margin-top: 165px; /*half height*/
+		}
