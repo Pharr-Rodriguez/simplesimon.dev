@@ -35,16 +35,21 @@ function simonGenerator(){
 	//Start w/ Simon sequence:
 function gamePlay(){
 	if (player.length == simon.length && player[game.round - 1] != simon[game.round-1]){
-		game.playing = false;
-		simon = '';
-		player = '';
-		game.round = 1;
-		console.log("you lose");
+		lose();
+		// game.playing = false;
+		// simon = '';
+		// player = '';
+		// game.round = 1;
+		// console.log("you lose");
 	} else if (player.length < simon.length){
 		for (i = 0; i < player.length; i++){
 			if (player[i] != simon[i]){
-				game.playing == false;
-				console.log("you lose!");
+				lose();
+				// game.playing == false;
+				// simon = "";
+				// player = "";
+				// game.round = 1;
+				// console.log("you lose!");
 			}
 		}
 	} else {
@@ -54,6 +59,14 @@ function gamePlay(){
 		game.round++;
 		console.log("Round: " + game.round);
 	}
+}
+
+function lose(){
+	game.playing = false;
+	simon = "";
+	player = "";
+	game.round = 1;
+	console.log("you lose!");
 }
 
 		//Add to Simon's sequence
