@@ -1,8 +1,8 @@
 
-        .color-buttons {
+        .colors {
 			position: relative;
     		left: 50%;
-    		top: 50%;	
+    		top: 50%;
     		width:300px;
     		height:300px;
     		margin-left: -173px; /*half width*/
@@ -21,7 +21,7 @@
         }
 
 		#start {
-			
+
             background-color: black;
 			border: 15px solid;
     		padding: 10px;
@@ -32,8 +32,8 @@
     		height: 25%;
 			width: 25%;
             position: fixed;
-			margin-left: 355px; 
-    		margin-top: -80px; 
+			margin-left: 355px;
+    		margin-top: -80px;
 
 		}
 		.button-color {
@@ -42,12 +42,12 @@
 		}
 		#red {
 			background-color: red;
-			border-style: solid; 
+			border-style: solid;
 			border-width: 30px 30px 15px 15px;
     		border-top-right-radius: 10em;
     		position: absolute;
     		left: 50%;
-    		top: 50%;	
+    		top: 50%;
     		width:50%;
     		height: 50%;
     		margin-left: -35px; /*half width*/
@@ -56,27 +56,27 @@
 		}
 		#blue {
 			background-color: blue;
-			border-style: solid; 
+			border-style: solid;
 			border-width: 15px 30px 30px 15px;
     		border-bottom-right-radius: 10em;
     		position: absolute;
     		left: 50%;
-    		top: 50%;	
+    		top: 50%;
     		width:50%;
     		height: 50%;
     		margin-left: -35px; /*half width*/
     		margin-top: 165px; /*half height*/
-    		
-    		
+
+
 		}
 		#green {
 			background-color: green;
-			border-style: solid; 
+			border-style: solid;
 			border-width: 30px 15px 15px 30px;
     		border-top-left-radius: 10em;
     		position: absolute;
     		left: 50%;
-    		top: 50%;	
+    		top: 50%;
     		width:50%;
     		height: 50%;
     		margin-left: -230px; /*half width*/
@@ -85,12 +85,12 @@
 
 		#yellow {
 			background-color: yellow;
-			border-style: solid; 
+			border-style: solid;
 			border-width: 15px 15px 30px 30px;
     		border-bottom-left-radius: 10em;
     		position: absolute;
     		left: 50%;
-    		top: 50%;	
+    		top: 50%;
     		width:50%;
     		height: 50%;
     		margin-left: -230px; /*half width*/
