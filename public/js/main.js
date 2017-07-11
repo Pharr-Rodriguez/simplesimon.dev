@@ -2,7 +2,7 @@
 //variables:
 var game = {
 	playing: false,
-	round: 0
+	round: 1
 }
 var simon = '';
 var player = '';
@@ -16,10 +16,11 @@ $(".button").click(function(){
 		console.log("Playing: " + game.playing);
 		simonGenerator();
 		console.log("Simon: " + simon);
-		console.log("Round: " + game.round + 1);
+		console.log("Round: " + game.round);
 	} else if (!isNaN(button) && game.playing){
 		player += button;
-		console.log(player);
+		console.log("Player: " + player);
+		gamePlay();
 	}
 });
 
@@ -32,26 +33,28 @@ function simonGenerator(){
 //Main Game loop:
 
 	//Start w/ Simon sequence:
-do {
-	if (player.length == simon.length && player[game.round] != simon[game.round]){
+function gamePlay(){
+	if (player.length == simon.length && player[game.round - 1] != simon[game.round-1]){
 		game.playing = false;
+		simon = '';
+		player = '';
+		game.round = 1;
 		console.log("you lose");
-	} else if (player.length == simon.length && player[game.round] == simon[game.round]){
+	} else if (player.length < simon.length){
+		for (i = 0; i < player.length; i++){
+			if (player[i] != simon[i]){
+				game.playing == false;
+				console.log("you lose!");
+			}
+		}
+	} else {
+		player = "";
 		simonGenerator();
-		console.log(simon);
+		console.log("Simon " + simon);
 		game.round++;
 		console.log("Round: " + game.round);
 	}
-} while(game.playing == true && simon.length > 0);
-	//While (correct): check if player input is correct (for loop)
-	// for (i = 0; i < player.length; i++){
-	// 	if (player[i] != simon[i]){
-	// 		game.playing == false;
-	// 		console.log("you lose!");
-	// 	}
-	// }
-
-
+}
 
 		//Add to Simon's sequence
 
