@@ -15,6 +15,7 @@ $(".button").click(function(){
 		game.playing = true;
 		console.log("Playing: " + game.playing);
 		simonGenerator();
+		animation();
 		console.log("Simon: " + simon);
 		console.log("Round: " + game.round);
 	} else if (!isNaN(button) && game.playing){
@@ -55,6 +56,7 @@ function gamePlay(){
 	} else {
 		player = "";
 		simonGenerator();
+		animation();
 		console.log("Simon " + simon);
 		game.round++;
 		console.log("Round: " + game.round);
@@ -69,6 +71,34 @@ function lose(){
 	console.log("you lose!");
 }
 
+function animation(){
+	sequence = simon.split("");
+	sequence.forEach(function(element){
+		$()
+		// setTimeout(function(){
+		// 	switch (element) {
+		// 		case "1":
+		// 			$('#green').animate({"background-color":"lightgreen"}, "slow")
+		// 			console.log('green');
+		// 			break;
+		// 		case "2":
+		// 			$('#yellow').animate({"background-color":"lightyellow"}, "slow")
+		// 			console.log('yellow');
+		// 			break;
+		// 		case "3":
+		// 			$('#red').animate({"background-color":"lightred"}, "slow")
+		// 			console.log('red');
+		// 			break;
+		// 		case "4":
+		// 			$('#blue').animate({"background-color":"lightblue"}, "slow")
+		// 			console.log('blue');
+		// 			break;
+		// 		default:
+		//
+		// 	}
+		// }, 1000)
+	})
+}
 		//Add to Simon's sequence
 
 		//Function which translates Simon's sequence into animations
