@@ -8,74 +8,63 @@
 	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 	<!-- <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 	<style media="screen">
+			html {
+					height: 100%;
+					background: #0ecde9; /* For older browsers that may not support gradients */
+					background: -webkit-radial-gradient(center, ellipse cover, #0ecde9 0%, #025e83 100%);
+					background: radial-gradient(#fff, #aaa);
+				}
 			.simon-game {
-				/*width: 100%;
-				height: 100%;
-				max-width: 800px;
-				max-height: 800px;
-				position:relative;
-				max-width: 800px;
-				min-width: 500px;
-				min-height: 500px;*/
-				position: absolute;
-				min-width: 100px;
-				min-height: 100px;
-				/*max-width: 50%;
-				max-height: 50%;*/
-				width: 500px;
-				height: 500px;
-				z-index: 1;
-				/*top: 55%;*/
-				left: 4%;
-				top: 5%;
-
-
-				/*background: purple;*/
-			}
-
+					position: absolute;
+					min-width: 100px;
+					min-height: 50px;
+					width: 350px;
+					height: 350px;
+					z-index: 1;
+					left: 3%;
+					top: 5%;
+				}
 			.colors {
-				display: flex;
-				height: 100%;
-				width: 100%;
-				justify-content: center;
-				/*max-width: 800px;*/
-				/*max-height: 800px;*/
-
-			}
+					display: flex;
+					height: 100%;
+					width: 100%;
+					justify-content: center;
+				}
 
 			.button {
 
 				/*justify-content: center;*/
-			}
-			#container-solid{
-				background-color: black;
-				bborder: 15px solid black;
-				width: 700px;
-				height: 700px;
-				position:relative;
-				margin: 0 auto;
-				border-top-right-radius: 18em;
-	    	border-top-left-radius: 18em;
-	    	border-bottom-left-radius: 18em;
-	    	border-bottom-right-radius: 18em;
-				display: flex;
-				flex-direction: center;
-				justify-content: center;
+				}
+				#container-solid{
+					background-color: black;
+					bborder: 15px solid black;
+					width: 500px;
+					height: 500px;
+					position:relative;
+					margin: 0 auto;
+					border-top-right-radius: 18em;
+		    	border-top-left-radius: 18em;
+		    	border-bottom-left-radius: 18em;
+		    	border-bottom-right-radius: 18em;
+					display: flex;
+					flex-direction: center;
+					justify-content: center;
+					box-shadow: 0px 0px 80px 0px #777777
 
 
 
 
 
-			}
+				}
 			#start {
 				background-color: black;
 				bborder: 15px solid black;
 				z-index: 4;
-				width: 200px;
-				height: 200px;
+				width: 150px;
+				height: 150px;
 				position: absolute;
-				left: 34%;
-				top: 34%;
+				left: 36%;
+				top: 33%;
 				color: white;
 				text-align: center;
 				border-top-right-radius: 7em;
@@ -142,9 +131,8 @@
 			}
 			#gameTitle {
 			  display: flex;
-			  flex-direction: center;
 			  justify-content: center;
-			  text-align: center;
+
 			}
 			#roundTitle {
 			  display: flex;
@@ -153,12 +141,12 @@
 			  text-align: center;
 			}
 			#startTitle {
-			  margin-top: 59px;
+			  margin-top: 50px;
 			}
 			body {
   		font-family: 'Righteous', cursive;
-  		font-size: 48px;
-  		text-shadow: 0px 0px 0px #aaa;
+  		font-size: 40px;
+  		/*text-shadow: 0px 0px 0px #aaa;*/
 			}
 	</style>
 <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
