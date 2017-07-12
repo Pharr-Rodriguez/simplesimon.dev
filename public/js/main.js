@@ -35,22 +35,13 @@ function simonGenerator(){
 
 	//Start w/ Simon sequence:
 function gamePlay(){
-	if (player.length == simon.length && player[game.round - 1] != simon[game.round-1]){
+	if (player.length == simon.length &&
+		player[game.round - 1] != simon[game.round-1]){
 		lose();
-		// game.playing = false;
-		// simon = '';
-		// player = '';
-		// game.round = 1;
-		// console.log("you lose");
 	} else if (player.length < simon.length){
 		for (i = 0; i < player.length; i++){
 			if (player[i] != simon[i]){
 				lose();
-				// game.playing == false;
-				// simon = "";
-				// player = "";
-				// game.round = 1;
-				// console.log("you lose!");
 			}
 		}
 	} else {
@@ -63,7 +54,7 @@ function gamePlay(){
 	}
 }
 
-function lose(){
+function lose() {
 	game.playing = false;
 	simon = "";
 	player = "";
@@ -73,31 +64,53 @@ function lose(){
 
 function animation(){
 	sequence = simon.split("");
-	sequence.forEach(function(element){
-		$()
+	var i = 0
+	// sequence.forEach(function(element, index){
+	// for (var i = 0; i < sequence.length; i++){
+	while (i < sequence.length){
+		(function(i){
+			setTimeout(function(){
+				$(".button-" + sequence[i])
+					.animate({
+							opacity: .7
+						}, 200)
+						.animate({
+							opacity: 1
+						}, 200)
+					}, 500 * i);
+			})(i);
+			i++;
+		}
+
+
+	// }
 		// setTimeout(function(){
 		// 	switch (element) {
 		// 		case "1":
-		// 			$('#green').animate({"background-color":"lightgreen"}, "slow")
+		// 			$('#green').animate({"background-color":"lightgreen"}, "slow");
+		// 			$('green').animate({"background-color":"green"});
 		// 			console.log('green');
 		// 			break;
 		// 		case "2":
-		// 			$('#yellow').animate({"background-color":"lightyellow"}, "slow")
-		// 			console.log('yellow');
-		// 			break;
-		// 		case "3":
-		// 			$('#red').animate({"background-color":"lightred"}, "slow")
+		// 			$('#red').animate({"background-color":"lightyellow"}, "slow");
+		// 			$('red').animate({"background-color":"red"});
 		// 			console.log('red');
 		// 			break;
+		// 		case "3":
+		// 			$('#yellow').animate({"background-color":"lightyellow"}, "slow");
+		// 			$('yellow').animate({"background-color":"yellow"});
+		// 			console.log('yellow');
+		// 			break;
 		// 		case "4":
-		// 			$('#blue').animate({"background-color":"lightblue"}, "slow")
+		// 			$('#blue').animate({"background-color":"lightblue"}, "slow");
+		// 			$('blue').animate({"background-color":"blue"});
 		// 			console.log('blue');
 		// 			break;
 		// 		default:
 		//
 		// 	}
 		// }, 1000)
-	})
+	// })
 }
 		//Add to Simon's sequence
 
