@@ -8,7 +8,14 @@ var simon = '';
 var player = '';
 
 //Event Listeners
-$(".button").click(function(){
+$(".button").mousedown(function(){
+	var button = $(this).data("button");
+	if (!isNaN(button)){
+		$(this).css({opacity: .7});
+	}
+})
+
+$(".button").mouseup(function(){
 	var button = $(this).data("button");
 
 
@@ -16,23 +23,21 @@ $(".button").click(function(){
 		game.playing = true;
 		console.log("Playing: " + game.playing);
 		simonGenerator();
-		animation();
+		setTimeout(animation, 400);
 		console.log("Simon: " + simon);
 		console.log("Round: " + game.round);
 	} else if (!isNaN(button) && game.playing){
-		$('.button').click(function(){
-			$(this).css({opacity: .7}).css({opacity: 1})
-		})
-		// animation(button.toString());
-		player += button;
-		console.log("Player: " + player);
-		gamePlay();
+		// $('.button').mousedown(function(){
+		// 	$(this).css({opacity: .7})
+		// })
+		// $('.button').mouseup(function(){
+			$(this).css({opacity: 1})
+			player += button;
+			console.log("Player: " + player);
+			gamePlay();
+		// })
 	}
 });
-
-$('.button').mousedown(function(){
-	$(this).css({opacity: .7})
-})
 
 //Simon sequence generator
 function simonGenerator(){
@@ -56,7 +61,7 @@ function gamePlay(){
 	} else {
 		player = "";
 		simonGenerator();
-		animation();
+		setTimeout(animation, 400);
 		console.log("Simon " + simon);
 		game.round++;
 		console.log("Round: " + game.round);
@@ -84,7 +89,7 @@ function animation(){
 						.animate({
 							opacity: 1
 						}, 200)
-					}, 1000 * i);
+					}, 700 * i);
 			})(i);
 			i++;
 	}
