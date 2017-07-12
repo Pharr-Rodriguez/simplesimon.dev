@@ -11,6 +11,7 @@ var player = '';
 $(".button").click(function(){
 	var button = $(this).data("button");
 
+
 	if (button == "start" && !game.playing) {
 		game.playing = true;
 		console.log("Playing: " + game.playing);
@@ -19,11 +20,19 @@ $(".button").click(function(){
 		console.log("Simon: " + simon);
 		console.log("Round: " + game.round);
 	} else if (!isNaN(button) && game.playing){
+		$('.button').click(function(){
+			$(this).css({opacity: .7}).css({opacity: 1})
+		})
+		// animation(button.toString());
 		player += button;
 		console.log("Player: " + player);
 		gamePlay();
 	}
 });
+
+$('.button').mousedown(function(){
+	$(this).css({opacity: .7})
+})
 
 //Simon sequence generator
 function simonGenerator(){
@@ -63,10 +72,8 @@ function lose() {
 }
 
 function animation(){
-	sequence = simon.split("");
+	var sequence = simon;
 	var i = 0
-	// sequence.forEach(function(element, index){
-	// for (var i = 0; i < sequence.length; i++){
 	while (i < sequence.length){
 		(function(i){
 			setTimeout(function(){
@@ -77,41 +84,17 @@ function animation(){
 						.animate({
 							opacity: 1
 						}, 200)
-					}, 500 * i);
+					}, 1000 * i);
 			})(i);
 			i++;
-		}
-
-
-	// }
-		// setTimeout(function(){
-		// 	switch (element) {
-		// 		case "1":
-		// 			$('#green').animate({"background-color":"lightgreen"}, "slow");
-		// 			$('green').animate({"background-color":"green"});
-		// 			console.log('green');
-		// 			break;
-		// 		case "2":
-		// 			$('#red').animate({"background-color":"lightyellow"}, "slow");
-		// 			$('red').animate({"background-color":"red"});
-		// 			console.log('red');
-		// 			break;
-		// 		case "3":
-		// 			$('#yellow').animate({"background-color":"lightyellow"}, "slow");
-		// 			$('yellow').animate({"background-color":"yellow"});
-		// 			console.log('yellow');
-		// 			break;
-		// 		case "4":
-		// 			$('#blue').animate({"background-color":"lightblue"}, "slow");
-		// 			$('blue').animate({"background-color":"blue"});
-		// 			console.log('blue');
-		// 			break;
-		// 		default:
-		//
-		// 	}
-		// }, 1000)
-	// })
+	}
 }
+
+// function buttonClick(){
+// 	$('.button').mousedown(function(){
+// 		$(this).css({opacity: .7})
+// 	})
+// }
 		//Add to Simon's sequence
 
 		//Function which translates Simon's sequence into animations
