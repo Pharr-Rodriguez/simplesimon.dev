@@ -135,7 +135,11 @@ function makeSound(freq){
 			sequence.push(konami[sequence.length]);
 			if (sequence.length == 10){
 				$('#gameTitle').html("<h3 id='gameTitle' class='vectro'><span class='vectro-body'>simple simon</span><span class='vectro-red'>I</span><span class='vectro-green'>I</span><span class='vectro-blue'>I</span></h3>");
-				$('html').css({'background-image': 'url("img/retro.png")', 'background-color': '#fff' });
+				$('.vectro-body').css({color: '#ecc'});
+				$('html').css({'background-image':'url("img/retro.png")', 'background-color': '#fff'});
+				//('#container-solid').css({'background-color':'#ffe'});
+
+				// $('#gameTitle').html('<div id="wrapper"><div class="future-cop"><h3 class="future">Simple</h3><h1 class="cop">Simon</h1></div></div>');
 			}
 		} else {
 			sequence = [];
