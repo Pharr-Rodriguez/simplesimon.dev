@@ -1,98 +1,130 @@
+html {
+    height: 100%;
+    background: #0ecde9;
+    background: -webkit-radial-gradient(center, ellipse cover, #0ecde9 0%, #025e83 100%);
+    background: radial-gradient(#fff, #aaa);
+  }
 
-        .colors {
-			position: relative;
-    		left: 50%;
-    		top: 50%;
-    		width:300px;
-    		height:300px;
-    		margin-left: -173px; /*half width*/
-    		margin-top: -32px; /*half height*/
-		}
-		.button {
-			border-color: black;
-			height: 50px;
-			width: 50px;
+.simon-game {
+    position: absolute;
+    min-width: 100px;
+    min-height: 50px;
+    width: 350px;
+    height: 350px;
+    z-index: 1;
+    left: 3%;
+    top: 5%;
+  }
 
-		}
+.colors {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+  }
 
-        #start-box{
-/*            height: 25%;
-            width: 50%;*/
-        }
+.button {
+  }
+  #container-solid{
+    background-color: black;
+    bborder: 15px solid black;
+    width: 500px;
+    height: 500px;
+    position:relative;
+    margin: 0 auto;
+    border-top-right-radius: 18em;
+    border-top-left-radius: 18em;
+    border-bottom-left-radius: 18em;
+    border-bottom-right-radius: 18em;
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    box-shadow: 0px 0px 80px 0px #777777
+  }
 
-		#start {
+  #start {
+    background-color: black;
+    bborder: 15px solid black;
+    z-index: 4;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 36%;
+    top: 33%;
+    color: white;
+    text-align: center;
+    border-top-right-radius: 7em;
+    border-top-left-radius: 7em;
+    border-bottom-left-radius: 7em;
+    border-bottom-right-radius: 7em;
+  }
 
-        background-color: black;
-			 border: 15px solid;
-    		padding: 10px;
-    		border-top-right-radius: 5em;
-    		border-top-left-radius: 5em;
-    		border-bottom-left-radius: 5em;
-    		border-bottom-right-radius: 5em;
-    		height: 100px;
-			width: 100px;
-            position: fixed;
-			margin-left: 355px;
-    		margin-top: -80px;
+  .button-color {
+    border: 0px solid black;
+    width: 100%;
+    height: 50%;
+  }
 
-		}
-		.button-color {
-			height: 175px;
-			width: 175px;
-		}
-		#red {
-			background-color: red;
-			border-style: solid;
-			border-width: 30px 30px 15px 15px;
-    		border-top-right-radius: 10em;
-    		position: absolute;
-    		left: 50%;
-    		top: 50%;
-    		width:50%;
-    		height: 50%;
-    		margin-left: -35px; /*half width*/
-    		margin-top: -30px;
+  .row {
+    width: 100%;
+  }
 
-		}
-		#blue {
-			background-color: #01abf6;
-			border-style: solid;
-			border-width: 15px 30px 30px 15px;
-    		border-bottom-right-radius: 10em;
-    		position: absolute;
-    		left: 50%;
-    		top: 50%;
-    		width:50%;
-    		height: 50%;
-    		margin-left: -35px; /*half width*/
-    		margin-top: 165px; /*half height*/
+  .colors{
+    position: absolute;
+    left: 9%;
+    top: 9%;
+  }
 
+  #red {
+    background-color: #fe3e2a;
+    border-style: solid;
+    border-width: 0px 0px 20px 15px;
+    border-top-right-radius: 17em;
+    float: inherit;
+    margin-left: 30px;
+  }
 
-		}
-		#green {
-			background-color: #0aba1a;
-			border-style: solid;
-			border-width: 30px 15px 15px 30px;
-    		border-top-left-radius: 10em;
-    		position: absolute;
-    		left: 50%;
-    		top: 50%;
-    		width:50%;
-    		height: 50%;
-    		margin-left: -230px; /*half width*/
-    		margin-top: -30px; /*half height*/
-		}
+  #blue {
+    background-color: #01abf6;
+    border-style: solid;
+    border-width: 10px 0px 0px 15px;
+    border-bottom-right-radius: 17em;
+    margin-left: 30px;
+    margin-top: 7px;
+  }
 
-		#yellow {
-			background-color: yellow;
-			border-style: solid;
-			border-width: 15px 15px 30px 30px;
-    		border-bottom-left-radius: 10em;
-    		position: absolute;
-    		left: 50%;
-    		top: 50%;
-    		width:50%;
-    		height: 50%;
-    		margin-left: -230px; /*half width*/
-    		margin-top: 165px; /*half height*/
-		}
+  #green {
+    background-color: #0aba1a;
+    border-style: solid;
+    border-width: 0px 15px 15px 0px;
+    border-top-left-radius: 17em;
+    margin-left: 10px;
+  }
+  #yellow {
+    background-color: #ffff01;
+    border-style: solid;
+    border-width: 15px 15px 0px 0px;
+    border-bottom-left-radius: 17em;
+    margin-left: 10px;
+    margin-top: 7px;
+  }
+  #gameTitle {
+    display: flex;
+    justify-content: center;
+  }
+
+  #roundTitle {
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #startTitle {
+    margin-top: 50px;
+  }
+
+  body {
+  font-family: 'Righteous', cursive;
+  font-size: 40px;
+  }
