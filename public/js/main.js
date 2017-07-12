@@ -135,7 +135,7 @@ function makeSound(freq){
 			sequence.push(konami[sequence.length]);
 			if (sequence.length == 10){
 				$('#gameTitle').html("<h3 id='gameTitle' class='vectro'><span class='vectro-body'>simple simon</span><span class='vectro-red'>I</span><span class='vectro-green'>I</span><span class='vectro-blue'>I</span></h3>");
-				$('body').css({'background-image': 'url("img/retro.png")'});
+				$('html').css({'background-image': 'url("img/retro.png")', 'background-color': '#fff' });
 			}
 		} else {
 			sequence = [];
