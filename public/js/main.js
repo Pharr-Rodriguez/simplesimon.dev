@@ -134,15 +134,16 @@ function makeSound(freq){
 		if (event.keyCode == konami[sequence.length]){
 			sequence.push(konami[sequence.length]);
 			if (sequence.length == 10){
-				$('#gameTitle').html("
-					<h3 id='gameTitle' class='vectro'><span class='vectro-body'>simple simon </span><span class='vectro-red'>I</span><span class='vectro-green'>I</span><span class='vectro-blue'>I</span></h3>");
-				$('body').css('background-image': url("img/retro.png"))
-
+				$('#gameTitle').html("<h3 id='gameTitle' class='vectro'><span class='vectro-body'>simple simon</span><span class='vectro-red'>I</span><span class='vectro-green'>I</span><span class='vectro-blue'>I</span></h3>");
+				$('body').css({'background-image': 'url("img/retro.png")'});
 			}
 		} else {
 			sequence = [];
 		}
-})
+	})
+})()
+
+
 // function buttonClick(){
 // 	$('.button').mousedown(function(){
 // 		$(this).css({opacity: .7})
