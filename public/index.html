@@ -28,7 +28,8 @@
 				/*top: 55%;*/
 				left: 4%;
 				top: 5%;
-				/*margin: -100px 0 0 -100px;*/
+
+
 				/*background: purple;*/
 			}
 
@@ -49,14 +50,21 @@
 			#container-solid{
 				background-color: black;
 				bborder: 15px solid black;
-				width: 600px;
-				height: 600px;
-				position: absolute;
-				left: 33%;
+				width: 700px;
+				height: 700px;
+				position:relative;
+				margin: 0 auto;
 				border-top-right-radius: 18em;
 	    	border-top-left-radius: 18em;
 	    	border-bottom-left-radius: 18em;
 	    	border-bottom-right-radius: 18em;
+				display: flex;
+				flex-direction: center;
+				justify-content: center;
+
+
+
+
 
 			}
 			#start {
@@ -65,7 +73,6 @@
 				z-index: 4;
 				width: 200px;
 				height: 200px;
-
 				position: absolute;
 				left: 34%;
 				top: 34%;
@@ -90,9 +97,15 @@
 			.row {
 				width: 100%;
 			}
+			.colors{
+				position: absolute;
+				left: 9%;
+				top: 9%;
+
+			}
 
 			#red {
-				background-color: red;
+				background-color: #fe3e2a;
 				border-style: solid;
 				border-width: 0px 0px 20px 15px;
 		    	border-top-right-radius: 17em;
@@ -101,7 +114,7 @@
 			}
 
 			#blue {
-				background-color: blue;
+				background-color: #01abf6;
 				border-style: solid;
 				border-width: 10px 0px 0px 15px;
 		    border-bottom-right-radius: 17em;
@@ -111,7 +124,7 @@
 			}
 
 			#green {
-				background-color: green;
+				background-color: #0aba1a;
 				border-style: solid;
 				border-width: 0px 15px 15px 0px;
 		    border-top-left-radius: 17em;
@@ -120,18 +133,41 @@
 			}
 
 			#yellow {
-				background-color: yellow;
+				background-color: #ffff01;
 				border-style: solid;
 				border-width: 15px 15px 0px 0px;
 		    border-bottom-left-radius: 17em;
 				margin-left: 10px;
 				margin-top: 7px;
 			}
+			#gameTitle {
+			  display: flex;
+			  flex-direction: center;
+			  justify-content: center;
+			  text-align: center;
+			}
+			#roundTitle {
+			  display: flex;
+			  flex-direction: center;
+			  justify-content: center;
+			  text-align: center;
+			}
+			#startTitle {
+			  margin-top: 59px;
+			}
+			body {
+  		font-family: 'Righteous', cursive;
+  		font-size: 48px;
+  		text-shadow: 0px 0px 0px #aaa;
+			}
 	</style>
+<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
 </head>
 
 <body>
 	<!-- TODO: Everything -->
+	<h1 id="gameTitle">simple simon</h1>
+	<h4 id="roundTitle">round</h4>
 	<div id="container-solid">
 		<div class="container simon-game">
 
@@ -155,7 +191,7 @@
 					</div>
 				</div>
 				<div id="start" class="button button-start" data-button="start">
-					Start
+					<p id="startTitle">Start</p>
 				</div>
 			</div>
 		</div>
