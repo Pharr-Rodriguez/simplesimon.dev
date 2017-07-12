@@ -7,15 +7,15 @@ var game = {
 var simon = '';
 var player = '';
 var context = new AudioContext()
-var osc = context.createOscillator()
-osc.start();
+// var osc = context.createOscillator()
+// osc.start();
 
 //Event Listeners
 $(".button").mousedown(function(){
 	if (game.playing){
 		var button = $(this).data("button");
 		var freq = $(this).data("frequency");
-		console.log(freq);
+		// console.log(freq);
 		if (!isNaN(button)){
 			$(this).css({opacity: .7});
 			makeSound(freq);
@@ -30,11 +30,11 @@ $(".button").mouseup(function(){
 	if (button == "start" && !game.playing) {
 		game.playing = true;
 		$('#roundTitle').text("round " + game.round)
-		console.log("Playing: " + game.playing);
+		// console.log("Playing: " + game.playing);
 		simonGenerator();
 		setTimeout(animation, 400);
-		console.log("Simon: " + simon);
-		console.log("Round: " + game.round);
+		// console.log("Simon: " + simon);
+		// console.log("Round: " + game.round);
 	} else if (!isNaN(button) && game.playing){
 		// $('.button').mousedown(function(){
 		// 	$(this).css({opacity: .7})
@@ -42,7 +42,7 @@ $(".button").mouseup(function(){
 		// $('.button').mouseup(function(){
 			// $(this).css({opacity: 1})
 			player += button;
-			console.log("Player: " + player);
+			// console.log("Player: " + player);
 			gamePlay();
 		// })
 	}
@@ -71,10 +71,10 @@ function gamePlay(){
 		player = "";
 		simonGenerator();
 		setTimeout(animation, 400);
-		console.log("Simon " + simon);
+		// console.log("Simon " + simon);
 		game.round++;
 		$('#roundTitle').text("round " + game.round)
-		console.log("Round: " + game.round);
+		// console.log("Round: " + game.round);
 	}
 }
 
@@ -84,7 +84,7 @@ function lose() {
 	simon = "";
 	player = "";
 	game.round = 1;
-	console.log("you lose!");
+	// console.log("you lose!");
 }
 
 function animation(){
@@ -109,28 +109,21 @@ function animation(){
 }
 
 function makeSound(freq){
-  // var context = new AudioContext()
-
-  // var osc = context.createOscillator()
-
-  // var freq = $('.button').data("frequency")
-
-  osc.type = "square";
-  osc.frequency.value = freq;
-
-
-  osc.connect(context.destination);
-  setTimeout(function(){
+	var osc = context.createOscillator()
+	osc.start();
+	osc.frequency.value = freq;
+	osc.type = "square";
+	osc.connect(context.destination);
+    setTimeout(function(){
 	  osc.disconnect();
-  }, 400)
-
+  	}, 400)
 }
 
 (function(){
 	var konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
 	var sequence = []
 	$(document).keyup(function(event){
-		console.log(event.keyCode);
+		// console.log(event.keyCode);
 		if (event.keyCode == konami[sequence.length]){
 			sequence.push(konami[sequence.length]);
 			if (sequence.length == 10){
