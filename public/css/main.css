@@ -10,8 +10,8 @@
 		}
 		.button {
 			border-color: black;
-			height: 50%;
-			width: 50%;
+			height: 50px;
+			width: 50px;
 
 		}
 
@@ -22,15 +22,15 @@
 
 		#start {
 
-            background-color: black;
-			border: 15px solid;
+        background-color: black;
+			 border: 15px solid;
     		padding: 10px;
     		border-top-right-radius: 5em;
     		border-top-left-radius: 5em;
     		border-bottom-left-radius: 5em;
     		border-bottom-right-radius: 5em;
-    		height: 25%;
-			width: 25%;
+    		height: 100px;
+			width: 100px;
             position: fixed;
 			margin-left: 355px;
     		margin-top: -80px;

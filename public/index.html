@@ -20,13 +20,14 @@
 				position: absolute;
 				min-width: 100px;
 				min-height: 100px;
-				max-width: 50%;
-				max-height: 50%;
-				width: 50%;
-				height: 50%;
+				/*max-width: 50%;
+				max-height: 50%;*/
+				width: 500px;
+				height: 500px;
 				z-index: 1;
 				/*top: 55%;*/
-				left: 25%;
+				left: 4%;
+				top: 5%;
 				/*margin: -100px 0 0 -100px;*/
 				/*background: purple;*/
 			}
@@ -45,23 +46,35 @@
 
 				/*justify-content: center;*/
 			}
+			#container-solid{
+				background-color: black;
+				bborder: 15px solid black;
+				width: 600px;
+				height: 600px;
+				position: absolute;
+				left: 33%;
+				border-top-right-radius: 18em;
+	    	border-top-left-radius: 18em;
+	    	border-bottom-left-radius: 18em;
+	    	border-bottom-right-radius: 18em;
 
+			}
 			#start {
 				background-color: black;
 				bborder: 15px solid black;
 				z-index: 4;
-				width: 44%;
-				height: 44%;
+				width: 200px;
+				height: 200px;
 
 				position: absolute;
-				left: 38%;
-				top: 38%;
+				left: 34%;
+				top: 34%;
 				color: white;
 				text-align: center;
-				border-top-right-radius: 5em;
-	    		border-top-left-radius: 5em;
-	    		border-bottom-left-radius: 5em;
-	    		border-bottom-right-radius: 5em;
+				border-top-right-radius: 7em;
+	    	border-top-left-radius: 7em;
+	    	border-bottom-left-radius: 7em;
+	    	border-bottom-right-radius: 7em;
 			}
 
 			.button-color {
@@ -81,63 +94,69 @@
 			#red {
 				background-color: red;
 				border-style: solid;
-				border-width: 30px 30px 20px 15px;
-		    	border-top-right-radius: 13em;
+				border-width: 0px 0px 20px 15px;
+		    	border-top-right-radius: 17em;
 				float: inherit;
-				margin-left: 40px;
+				margin-left: 30px;
 			}
 
 			#blue {
 				background-color: blue;
 				border-style: solid;
-				border-width: 10px 30px 30px 15px;
-		    	border-bottom-right-radius: 13em;
-				margin-left: 40px;
+				border-width: 10px 0px 0px 15px;
+		    border-bottom-right-radius: 17em;
+				margin-left: 30px;
+				margin-top: 7px;
 
 			}
 
 			#green {
 				background-color: green;
 				border-style: solid;
-				border-width: 30px 15px 15px 30px;
-		    	border-top-left-radius: 13em;
+				border-width: 0px 15px 15px 0px;
+		    border-top-left-radius: 17em;
+				margin-left: 10px;
 
 			}
 
 			#yellow {
 				background-color: yellow;
 				border-style: solid;
-				border-width: 15px 15px 30px 30px;
-		    	border-bottom-left-radius: 13em;
+				border-width: 15px 15px 0px 0px;
+		    border-bottom-left-radius: 17em;
+				margin-left: 10px;
+				margin-top: 7px;
 			}
 	</style>
 </head>
 
 <body>
 	<!-- TODO: Everything -->
-	<div class="container simon-game">
+	<div id="container-solid">
+		<div class="container simon-game">
 
-		<div class="container colors">
+			<div class="container colors">
 
-			<div class="row">
+				<div class="row">
 
-				<div id="green" class="button button-color button-1" data-button="1">
+					<div id="green" class="button button-color button-1" data-button="1">
 
+					</div>
+					<div id="yellow" class="button button-color button-3" data-button="3">
+
+					</div>
 				</div>
-				<div id="yellow" class="button button-color button-3" data-button="3">
+				<div class="row">
+					<div id="red" class="button button-color button-2" data-button="2">
 
-				</div>
-			</div>
-			<div class="row">
-				<div id="red" class="button button-color button-2" data-button="2">
+					</div>
+					<div id="blue" class="button button-color button-4" data-button="4">
 
+					</div>
 				</div>
-				<div id="blue" class="button button-color button-4" data-button="4">
-
+				<div id="start" class="button button-start" data-button="start">
+					Start
 				</div>
-			</div>
-			<div id="start" class="button button-start" data-button="start">
-				Start
 			</div>
 		</div>
 	</div>
