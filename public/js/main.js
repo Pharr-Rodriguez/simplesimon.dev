@@ -6,7 +6,14 @@ var game = {
 }
 var simon = '';
 var player = '';
-var context = new AudioContext()
+var context = new AudioContext();
+// var oscFail = context.createOscillator();
+// oscFail.start();
+// var failFreq;
+// $('.button').click(function(){failFreq =  $(this).data("frequency")});
+// oscFail
+// oscFail.frequency.value = parseFloat(failFreq);
+
 // var osc = context.createOscillator()
 // osc.start();
 
@@ -80,7 +87,8 @@ function gamePlay(){
 
 function lose() {
 	game.playing = false;
-	$('#roundTitle').text("press start to try again")
+	$('#roundTitle').text("press start to try again");
+	// failSound();
 	simon = "";
 	player = "";
 	game.round = 1;
@@ -118,6 +126,20 @@ function makeSound(freq){
 	  osc.disconnect();
   	}, 400)
 }
+
+// function failSound(freq){
+// 	// var osc = context.createOscillator()
+// 	// var freq = $('.button-' + player[player.length - 1]).data("frequency");
+// 	// oscFail.start();
+// 	// oscFail.frequency.value = freq/3;
+// 	oscFail.frequency.value = failFreq;
+// 	oscFail.type = "square";
+// 	oscFail.connect(context.destination);
+// 	oscFail.frequency.value = freq/3;
+// 	setTimeout(function(){
+// 	  oscFail.disconnect();
+//   }, 1000)
+// }
 
 (function(){
 	var konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
