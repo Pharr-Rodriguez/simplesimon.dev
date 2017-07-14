@@ -30,7 +30,7 @@ $(".button").mousedown(function(){
 	}
 })
 
-$(".button").mouseup(function(){
+$(".button").click(function(){
 	var button = $(this).data("button");
 	$(this).css({opacity: 1})
 
